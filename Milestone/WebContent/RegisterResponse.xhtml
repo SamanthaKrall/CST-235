@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+
+	<head>
+		<title><ui:insert name="pageTitle"></ui:insert></title>
+	</head>
+	
+	<body>
+	<ui:composition template="/layouts/commonLayout.xhtml">
+	<ui:define name="content">
+		<h:form>
+			User ID:<h:inputText value="#{newUser.userID}" />
+			<br></br>
+			<br></br>
+			
+			Password:<h:inputText value="#{newUser.password}" />
+			<br></br>
+			<br></br>
+			
+			First Name:<h:inputText value="#{newUser.firstName}" />
+			<br></br>
+			<br></br>
+			
+			Last Name:<h:inputText value="#{newUser.lastName}" />
+			<br></br>
+			<br></br>
+			
+			Email:<h:inputText value="#{newUser.email}" />
+			<br></br>
+			<br></br>
+			
+			Phone Number:<h:inputText value="#{newUser.phoneN}" />
+			<br></br>
+			<br></br>
+			
+			<h:commandButton action="#{registerFormController.register()}" value="Register" />
+			<br></br>
+			<br></br>
+			
+		</h:form>
+	</ui:define>
+	</ui:composition>	
+	</body>
+	
+</html>

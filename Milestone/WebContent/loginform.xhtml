@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<head>
+		<title><ui:insert name="pageTitle">Adopt Ohio Login or Register</ui:insert></title>
+		
+</head>
+	
+	<h:body>
+		<h:graphicImage value="/Images/AdoptDontShopImage/AdoptDontSHop.jpg" />
+		<h1 style="color:DodgerBlue; font-weight:bold; font-style: italic; font-size:30px;">Welcome to Adopt Ohio!</h1>
+		<ui:composition template="/layouts/commonLayout.xhtml">
+		
+		<ui:define name="content">
+		<h:form>
+			User ID:<h:inputText value="#{user.userID}" />
+			<br></br>
+			<br></br>
+			
+			Password:<h:inputText value="#{user.password}" />
+			<br></br>
+			<br />
+			
+			<h:commandButton action="#{loginFormController.onLogin()}" value="Login" />
+			<br></br>
+			<br></br>
+			
+			<h:commandButton action="#{loginFormController.register()}" value="Register" />
+			<br></br>
+			<br></br>
+			
+		</h:form>
+		</ui:define>
+	
+		</ui:composition>
+		<h5 style="color:DodgerBlue; font-weight:bold;">Copyright 2018 Grand Canyon University Samantha Krall</h5>
+	</h:body>
+</html>

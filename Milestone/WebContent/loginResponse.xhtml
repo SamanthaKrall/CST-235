@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<head>
+<title><ui:insert name="pageTitle">Welcome to Adopt Ohio</ui:insert></title>
+
+
+<style>
+	.table{
+		border:2px solid DodgerBlue;
+	}
+	.header{
+		font-weight:bold;
+	}
+	.table-odd{
+		background: #EEE;
+	}
+	
+</style>
+</head>
+
+<body>
+<h1 style="color:DodgerBlue; font-weight:bold; font-style: italic; font-size:30px;">Welcome to Adopt Ohio!</h1>
+
+	<p style="color:DodgerBlue; font-weight:bold;">Hello #{user.userID}</p>	
+	
+	<h:dataTable value="#{animal.animal}" var="o" styleClass="table" headerClass="header" rowClasses="table-odd, table-even">
+		<h:column>
+			<f:facet name="header">ID</f:facet>
+				#{o.id}
+		</h:column>
+	
+		<h:column>
+			<f:facet name="header">Name</f:facet>
+				#{o.name}
+		</h:column>
+	
+		<h:column>
+			<f:facet name="header">Color</f:facet>
+				#{o.color}
+		</h:column>
+	
+		<h:column>
+			<f:facet name="header">Age</f:facet>
+				#{o.age}
+		</h:column>
+	
+		<h:column>
+			<f:facet name="header">Breed</f:facet>
+				#{o.breed}
+		</h:column>
+	
+		<h:column>
+			<f:facet name="header">Health Issues</f:facet>
+				#{o.healthIssues}
+		</h:column>
+	
+		<h:column>
+			<f:facet name="header">Behavioral Issues</f:facet>
+				#{o.behavioralIssues}
+		</h:column>
+	
+		<h:column>
+			<f:facet name="header">Vet Treatment</f:facet>
+				#{o.vetTreatment}
+		</h:column>
+	
+		<h:column>
+			<f:facet name="header">Intake Date</f:facet>
+				#{o.intakeDate}
+		</h:column>
+	
+		<h:column>
+			<f:facet name="header">Available for Adoption</f:facet>
+				#{o.availAdoptDate}
+		</h:column>
+	
+		<h:column>
+			<f:facet name="header">Date Adopted</f:facet>
+				#{o.adoptedDate}
+		</h:column>
+	
+	</h:dataTable>
+	<h5 style="color:DodgerBlue; font-weight:bold;">Copyright 2018 Grand Canyon University Samantha Krall</h5>
+
+
+</body>
+
+</html>
